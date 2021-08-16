@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/login_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -108,7 +109,16 @@ class OnboardingPage extends StatelessWidget {
                               (2 * defaultMargin)) /
                           2,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return LoginPage();
+                              },
+                            ),
+                          );
+                        },
                         color: yellowColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
