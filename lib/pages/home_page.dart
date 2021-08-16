@@ -5,11 +5,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [],
-          ),
-        ),
+        child: Center(),
       ),
     );
   }
