@@ -13,6 +13,14 @@ Color greenColor = Color(0XFF6DD400);
 Color orangeColor = Color(0XFFE9421E);
 Color darkBlueColor = Color(0XFF3D66B8);
 
+TextStyle boldTextStyle = GoogleFonts.roboto(
+  fontWeight: FontWeight.w700,
+);
+
+TextStyle semiBoldTextStyle = GoogleFonts.roboto(
+  fontWeight: FontWeight.w600,
+);
+
 TextStyle mediumTextStyle = GoogleFonts.roboto(
   fontWeight: FontWeight.w500,
 );

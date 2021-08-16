@@ -25,7 +25,7 @@ class Header extends StatelessWidget {
           padding: EdgeInsets.only(left: 5),
           child: Text(
             title,
-            style: mediumTextStyle.copyWith(
+            style: semiBoldTextStyle.copyWith(
               fontSize: 20,
               color: blackColor,
             ),
