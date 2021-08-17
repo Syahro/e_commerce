@@ -27,6 +27,7 @@ class Header extends StatelessWidget {
             title,
             style: semiBoldTextStyle.copyWith(
               fontSize: 20,
+              fontWeight: FontWeight.w700,
               color: blackColor,
             ),
           ),

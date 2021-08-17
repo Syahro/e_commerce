@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/signup_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/header.dart';
 import 'package:e_commerce/widget/text_field_and_label.dart';
@@ -115,7 +116,16 @@ class LoginPage extends StatelessWidget {
                             2) -
                         7.5,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SignupPage();
+                            },
+                          ),
+                        );
+                      },
                       color: orangeColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -154,7 +164,16 @@ class LoginPage extends StatelessWidget {
                             2) -
                         7.5,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SignupPage();
+                            },
+                          ),
+                        );
+                      },
                       color: darkBlueColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),

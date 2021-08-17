@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/otp_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/header.dart';
 import 'package:e_commerce/widget/text_field_and_label.dart';
@@ -74,7 +75,16 @@ class SignupPage extends StatelessWidget {
                       height: 55,
                       width: double.infinity,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return OtpPage();
+                              },
+                            ),
+                          );
+                        },
                         color: yellowColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
