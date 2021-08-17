@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/reset_password.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/header.dart';
 import 'package:e_commerce/widget/otp_info.dart';
@@ -74,7 +75,16 @@ class OtpPage extends StatelessWidget {
                 height: 55,
                 width: MediaQuery.of(context).size.width - (2 * defaultMargin),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ResetPassword();
+                        },
+                      ),
+                    );
+                  },
                   child: Text(
                     'Keep going',
                     style: mediumTextStyle.copyWith(
