@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/home_page.dart';
 import 'package:e_commerce/pages/signup_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/header.dart';
@@ -88,7 +89,16 @@ class LoginPage extends StatelessWidget {
                       height: 55,
                       width: double.infinity,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return HomePage();
+                              },
+                            ),
+                          );
+                        },
                         child: Text(
                           'Login Now',
                           style: mediumTextStyle.copyWith(
