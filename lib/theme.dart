@@ -12,6 +12,7 @@ Color purpleColor = Color(0XFFB620E0);
 Color greenColor = Color(0XFF6DD400);
 Color orangeColor = Color(0XFFE9421E);
 Color darkBlueColor = Color(0XFF3D66B8);
+Color backGroundCard = Color(0XFFECEEF0);
 
 TextStyle boldTextStyle = GoogleFonts.roboto(
   fontWeight: FontWeight.w700,
