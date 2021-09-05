@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/katalog_page.dart';
 import 'package:e_commerce/widget/category_card.dart';
 import 'package:e_commerce/widget/floating_bottom.dart';
 import 'package:e_commerce/widget/new_product_card.dart';
@@ -243,11 +244,23 @@ class HomePage extends StatelessWidget {
                                   color: darkGreyColor,
                                 ),
                               ),
-                              Text(
-                                'SEE ALL',
-                                style: regularTextStyle.copyWith(
-                                  fontSize: 12,
-                                  color: purpleColor,
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return KatalogPage();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  'SEE ALL',
+                                  style: regularTextStyle.copyWith(
+                                    fontSize: 12,
+                                    color: purpleColor,
+                                  ),
                                 ),
                               ),
                             ],
