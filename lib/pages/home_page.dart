@@ -1,4 +1,5 @@
 import 'package:e_commerce/widget/category_card.dart';
+import 'package:e_commerce/widget/floating_bottom.dart';
 import 'package:e_commerce/widget/new_product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/theme.dart';
@@ -7,6 +8,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingBottom(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Stack(
         children: [
           Stack(
@@ -159,121 +162,128 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 255),
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: whiteColor,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(20),
+          ListView(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 255),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      top: 25,
+                      left: 25,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(right: defaultMargin),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'CATEGORIES',
+                                style: mediumTextStyle.copyWith(
+                                  fontSize: 14,
+                                  color: darkGreyColor,
+                                ),
+                              ),
+                              Text(
+                                'SEE ALL',
+                                style: mediumTextStyle.copyWith(
+                                  fontSize: 12,
+                                  color: purpleColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              CategoryCard('cate_shoes.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              CategoryCard('cate_hodie.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              CategoryCard('cate_jeans.png'),
+                              SizedBox(
+                                width: defaultMargin,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            right: defaultMargin,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'NEW PRODUCT',
+                                style: regularTextStyle.copyWith(
+                                  fontSize: 14,
+                                  color: darkGreyColor,
+                                ),
+                              ),
+                              Text(
+                                'SEE ALL',
+                                style: regularTextStyle.copyWith(
+                                  fontSize: 12,
+                                  color: purpleColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              NewProductCard('new1.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              NewProductCard('new2.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              NewProductCard('new1.png'),
+                              SizedBox(
+                                width: defaultMargin,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              child: Padding(
-                padding: EdgeInsets.only(
-                  top: 25,
-                  left: 25,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: defaultMargin),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'CATEGORIES',
-                            style: mediumTextStyle.copyWith(
-                              fontSize: 14,
-                              color: darkGreyColor,
-                            ),
-                          ),
-                          Text(
-                            'SEE ALL',
-                            style: mediumTextStyle.copyWith(
-                              fontSize: 12,
-                              color: purpleColor,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          CategoryCard('cate_shoes.png'),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          CategoryCard('cate_hodie.png'),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          CategoryCard('cate_jeans.png'),
-                          SizedBox(
-                            width: defaultMargin,
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        right: defaultMargin,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'NEW PRODUCT',
-                            style: regularTextStyle.copyWith(
-                              fontSize: 14,
-                              color: darkGreyColor,
-                            ),
-                          ),
-                          Text(
-                            'SEE ALL',
-                            style: regularTextStyle.copyWith(
-                              fontSize: 12,
-                              color: purpleColor,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          NewProductCard('new1.png'),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          NewProductCard('new2.png'),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          NewProductCard('new1.png'),
-                          SizedBox(
-                            width: defaultMargin,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            ],
           ),
         ],
       ),
