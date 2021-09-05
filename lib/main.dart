@@ -1,4 +1,3 @@
-import 'package:e_commerce/pages/home_page.dart';
 import 'package:e_commerce/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
