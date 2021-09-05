@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/description_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/bullet_image.dart';
 import 'package:e_commerce/widget/new_product_card.dart';
@@ -7,6 +8,7 @@ class Detailpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       body: SafeArea(
         child: ListView(
           children: [
@@ -172,34 +174,47 @@ class Detailpage extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Container(
-                          height: 54,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: greyColor.withOpacity(0.5),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return DescriptionPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 54,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                color: greyColor.withOpacity(0.5),
+                              ),
                             ),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 20,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'See Description',
-                                  style: regularTextStyle.copyWith(
-                                    fontSize: 14,
-                                    color: darkGreyColor,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'See Description',
+                                    style: regularTextStyle.copyWith(
+                                      fontSize: 14,
+                                      color: darkGreyColor,
+                                    ),
                                   ),
-                                ),
-                                Icon(
-                                  Icons.chevron_right,
-                                  color: darkGreyColor.withOpacity(0.5),
-                                ),
-                              ],
+                                  Icon(
+                                    Icons.chevron_right,
+                                    color: darkGreyColor.withOpacity(0.5),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
