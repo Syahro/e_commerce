@@ -264,7 +264,47 @@ class Detailpage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 5,
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'ADD TO CART',
+                              style: mediumTextStyle.copyWith(
+                                fontSize: 14,
+                                color: blackColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 5,
+                          child: FlatButton(
+                            onPressed: () {},
+                            color: yellowColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: Text(
+                              'BUY NOW',
+                              style: mediumTextStyle.copyWith(
+                                fontSize: 14,
+                                color: blackColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
