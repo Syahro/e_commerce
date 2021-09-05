@@ -276,7 +276,51 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 50,
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'DISCOUNT',
+                              style: mediumTextStyle.copyWith(
+                                fontSize: 14,
+                                color: darkGreyColor,
+                              ),
+                            ),
+                            Text(
+                              'SEE ALL',
+                              style: mediumTextStyle.copyWith(
+                                fontSize: 12,
+                                color: purpleColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              NewProductCard('new1.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              NewProductCard('new2.png'),
+                              SizedBox(
+                                width: 15,
+                              ),
+                              NewProductCard('new1.png'),
+                              SizedBox(
+                                width: defaultMargin,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 80,
                         ),
                       ],
                     ),
