@@ -1,4 +1,5 @@
 import 'package:e_commerce/pages/description_page.dart';
+import 'package:e_commerce/pages/give_rate_page.dart';
 import 'package:e_commerce/pages/see_rating_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/bullet_image.dart';
@@ -113,42 +114,58 @@ class Detailpage extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Icon(
-                              Icons.star,
-                              color: yellowColor,
-                              size: 15,
-                            ),
-                            SizedBox(
-                              width: 2,
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: yellowColor,
-                              size: 15,
-                            ),
-                            SizedBox(
-                              width: 2,
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: yellowColor,
-                              size: 15,
-                            ),
-                            SizedBox(
-                              width: 2,
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: yellowColor,
-                              size: 15,
-                            ),
-                            SizedBox(
-                              width: 2,
-                            ),
-                            Icon(
-                              Icons.star,
-                              color: yellowColor,
-                              size: 15,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return GiveRatePage();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: yellowColor,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: yellowColor,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: yellowColor,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: yellowColor,
+                                    size: 15,
+                                  ),
+                                  SizedBox(
+                                    width: 2,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: yellowColor,
+                                    size: 15,
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(
                               width: 13,
