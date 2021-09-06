@@ -1,4 +1,5 @@
 import 'package:e_commerce/pages/description_page.dart';
+import 'package:e_commerce/pages/see_rating_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/bullet_image.dart';
 import 'package:e_commerce/widget/new_product_card.dart';
@@ -152,11 +153,23 @@ class Detailpage extends StatelessWidget {
                             SizedBox(
                               width: 13,
                             ),
-                            Text(
-                              'SEE REVIEW',
-                              style: regularTextStyle.copyWith(
-                                fontSize: 14,
-                                color: purpleColor,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return SeeRatingPage();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'SEE REVIEW',
+                                style: regularTextStyle.copyWith(
+                                  fontSize: 14,
+                                  color: purpleColor,
+                                ),
                               ),
                             ),
                           ],
