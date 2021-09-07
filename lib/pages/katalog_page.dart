@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/camera_result_page.dart';
 import 'package:e_commerce/pages/search_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/katalog_card.dart';
@@ -258,6 +259,16 @@ class KatalogPage extends StatelessWidget {
                           Icons.arrow_back,
                         ),
                         InkWell(
+                          onDoubleTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return CameraResultPage();
+                                },
+                              ),
+                            );
+                          },
                           onTap: () {
                             Navigator.push(
                               context,
