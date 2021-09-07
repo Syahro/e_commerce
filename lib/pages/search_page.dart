@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/search_camera_result_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/recent_view_search.dart';
 import 'package:e_commerce/widget/recomendation_search_info.dart';
@@ -174,25 +175,37 @@ class SearchPage extends StatelessWidget {
                   horizontal: defaultMargin,
                   vertical: 10,
                 ),
-                child: Container(
-                  height: 45,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: darkGreyColor.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 18,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SearchCameraResultPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: darkGreyColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.search,
-                          color: darkGreyColor.withOpacity(0.5),
-                        ),
-                      ],
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 18,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.search,
+                            color: darkGreyColor.withOpacity(0.5),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
