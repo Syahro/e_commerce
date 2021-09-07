@@ -1,4 +1,5 @@
 import 'package:e_commerce/pages/cart_page.dart';
+import 'package:e_commerce/pages/empty_cart_page.dart';
 import 'package:e_commerce/pages/home_page.dart';
 import 'package:e_commerce/pages/katalog_page.dart';
 import 'package:e_commerce/theme.dart';
@@ -64,6 +65,16 @@ class FloatingBottom extends StatelessWidget {
               ),
             ),
             InkWell(
+              onDoubleTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return EmptyCartPage();
+                    },
+                  ),
+                );
+              },
               onTap: () {
                 Navigator.push(
                   context,

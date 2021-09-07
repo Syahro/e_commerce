@@ -15,6 +15,7 @@ Color darkBlueColor = Color(0XFF3D66B8);
 Color backGroundCard = Color(0XFFECEEF0);
 Color blueColor = Color(0XFF3F4BBF);
 Color blueAccent = Color(0XFF0094FE);
+Color backgroundColor = Color(0XFFF9F9F9);
 
 
 TextStyle boldTextStyle = GoogleFonts.roboto(
