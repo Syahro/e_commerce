@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/search_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/katalog_card.dart';
 import 'package:e_commerce/widget/palete_color.dart';
@@ -256,23 +257,35 @@ class KatalogPage extends StatelessWidget {
                         Icon(
                           Icons.arrow_back,
                         ),
-                        Container(
-                          height: 45,
-                          width: MediaQuery.of(context).size.width - 85,
-                          decoration: BoxDecoration(
-                            color: greyColor.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(right: 13),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Icon(
-                                  Icons.search,
-                                  color: greyColor,
-                                ),
-                              ],
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return SearchPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 45,
+                            width: MediaQuery.of(context).size.width - 85,
+                            decoration: BoxDecoration(
+                              color: greyColor.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(right: 13),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Icon(
+                                    Icons.search,
+                                    color: greyColor,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         )
