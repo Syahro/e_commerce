@@ -1,3 +1,6 @@
+import 'package:e_commerce/pages/cart_page.dart';
+import 'package:e_commerce/pages/home_page.dart';
+import 'package:e_commerce/pages/katalog_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/icon_floating.dart';
 import 'package:flutter/material.dart';
@@ -26,20 +29,56 @@ class FloatingBottom extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconFloating(
-              imageUrl: 'home.png',
-              title: 'Home',
-              isActive: true,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return HomePage();
+                    },
+                  ),
+                );
+              },
+              child: IconFloating(
+                imageUrl: 'home.png',
+                title: 'Home',
+                isActive: true,
+              ),
             ),
-            IconFloating(
-              imageUrl: 'fashion.png',
-              title: 'Product',
-              isActive: false,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return KatalogPage();
+                    },
+                  ),
+                );
+              },
+              child: IconFloating(
+                imageUrl: 'fashion.png',
+                title: 'Product',
+                isActive: false,
+              ),
             ),
-            IconFloating(
-              imageUrl: 'list.png',
-              title: 'Order',
-              isActive: false,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Cartpage();
+                    },
+                  ),
+                );
+              },
+              child: IconFloating(
+                imageUrl: 'list.png',
+                title: 'Order',
+                isActive: false,
+              ),
             ),
             IconFloating(
               imageUrl: 'user.png',
