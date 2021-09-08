@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/checkout_summary_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/appbar_checkout.dart';
 import 'package:e_commerce/widget/bullet_checkout_trace.dart';
@@ -257,7 +258,7 @@ class CheckoutPaymentPage extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) {
-                                          return CheckoutPaymentPage();
+                                          return CheckoutSummaryPage();
                                         },
                                       ),
                                     );
