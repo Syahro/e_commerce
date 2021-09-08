@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/track_order_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/menu_user.dart';
 import 'package:flutter/material.dart';
@@ -111,9 +112,21 @@ class ProfilePage extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        MenuUser(
-                          title: 'Order History',
-                          iconTitle: Icons.schedule_outlined,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return TrackOrderpage();
+                                },
+                              ),
+                            );
+                          },
+                          child: MenuUser(
+                            title: 'Order History',
+                            iconTitle: Icons.schedule_outlined,
+                          ),
                         ),
                         SizedBox(
                           height: 30,
