@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/checkout_address_page_more.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/appbar_checkout.dart';
 import 'package:e_commerce/widget/bullet_checkout_trace.dart';
@@ -26,11 +27,17 @@ class CheckoutAddressPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      BulletCheckoutTrace(true, 36, 18),
-                      GarisBulletCheckout(),
-                      BulletCheckoutTrace(false, 36, 18),
-                      GarisBulletCheckout(),
-                      BulletCheckoutTrace(false, 36, 18),
+                      BulletCheckoutTrace(true, 36, 18, 'Delivery'),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 18),
+                        child: GarisBulletCheckout(),
+                      ),
+                      BulletCheckoutTrace(false, 36, 18, 'Address'),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 18),
+                        child: GarisBulletCheckout(),
+                      ),
+                      BulletCheckoutTrace(false, 36, 18, 'Payment'),
                     ],
                   ),
                   SizedBox(
@@ -51,7 +58,7 @@ class CheckoutAddressPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          BulletCheckoutTrace(false, 20, 10),
+                          BulletCheckoutTrace(false, 20, 10, ''),
                         ],
                       ),
                     ),
@@ -74,7 +81,7 @@ class CheckoutAddressPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          BulletCheckoutTrace(true, 20, 10),
+                          BulletCheckoutTrace(true, 20, 10, ''),
                         ],
                       ),
                     ),
@@ -86,7 +93,16 @@ class CheckoutAddressPage extends StatelessWidget {
                     width: double.infinity,
                     height: 55,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return CheckoutAddressPageMore();
+                            },
+                          ),
+                        );
+                      },
                       color: yellowColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
