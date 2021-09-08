@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/checkout_payment_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/appbar_checkout.dart';
 import 'package:e_commerce/widget/bullet_checkout_trace.dart';
@@ -285,7 +286,16 @@ class CheckoutAddressPageMore extends StatelessWidget {
                       height: double.infinity,
                       margin: EdgeInsets.all(5),
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return CheckoutPaymentPage();
+                              },
+                            ),
+                          );
+                        },
                         color: yellowColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),

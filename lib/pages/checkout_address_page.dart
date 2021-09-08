@@ -17,32 +17,32 @@ class CheckoutAddressPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                BulletCheckoutTrace(true, 36, 18, 'Delivery'),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 18),
+                  child: GarisBulletCheckout(),
+                ),
+                BulletCheckoutTrace(false, 36, 18, 'Address'),
+                Padding(
+                  padding: EdgeInsets.only(bottom: 18),
+                  child: GarisBulletCheckout(),
+                ),
+                BulletCheckoutTrace(false, 36, 18, 'Payment'),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: defaultMargin,
               ),
               child: Column(
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      BulletCheckoutTrace(true, 36, 18, 'Delivery'),
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 18),
-                        child: GarisBulletCheckout(),
-                      ),
-                      BulletCheckoutTrace(false, 36, 18, 'Address'),
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 18),
-                        child: GarisBulletCheckout(),
-                      ),
-                      BulletCheckoutTrace(false, 36, 18, 'Payment'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
                   Container(
                     height: 101,
                     width: double.infinity,
