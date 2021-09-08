@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/checkout_address_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/cart_card.dart';
 import 'package:flutter/material.dart';
@@ -194,7 +195,16 @@ class Cartpage extends StatelessWidget {
                             height: 45,
                             width: 155,
                             child: FlatButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return CheckoutAddressPage();
+                                    },
+                                  ),
+                                );
+                              },
                               color: yellowColor,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
