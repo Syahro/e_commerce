@@ -291,24 +291,29 @@ class HomePage extends StatelessWidget {
                         SizedBox(
                           height: 20,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'DISCOUNT',
-                              style: mediumTextStyle.copyWith(
-                                fontSize: 14,
-                                color: darkGreyColor,
+                        Padding(
+                          padding: EdgeInsets.only(
+                            right: defaultMargin,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'DISCOUNT',
+                                style: mediumTextStyle.copyWith(
+                                  fontSize: 14,
+                                  color: darkGreyColor,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'SEE ALL',
-                              style: mediumTextStyle.copyWith(
-                                fontSize: 12,
-                                color: purpleColor,
+                              Text(
+                                'SEE ALL',
+                                style: mediumTextStyle.copyWith(
+                                  fontSize: 12,
+                                  color: purpleColor,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         SizedBox(
                           height: 16,

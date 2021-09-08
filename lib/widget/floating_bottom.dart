@@ -2,6 +2,7 @@ import 'package:e_commerce/pages/cart_page.dart';
 import 'package:e_commerce/pages/empty_cart_page.dart';
 import 'package:e_commerce/pages/home_page.dart';
 import 'package:e_commerce/pages/katalog_page.dart';
+import 'package:e_commerce/pages/profile_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/icon_floating.dart';
 import 'package:flutter/material.dart';
@@ -91,10 +92,22 @@ class FloatingBottom extends StatelessWidget {
                 isActive: false,
               ),
             ),
-            IconFloating(
-              imageUrl: 'user.png',
-              title: 'Account',
-              isActive: false,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ProfilePage();
+                    },
+                  ),
+                );
+              },
+              child: IconFloating(
+                imageUrl: 'user.png',
+                title: 'Account',
+                isActive: false,
+              ),
             )
           ],
         ),
