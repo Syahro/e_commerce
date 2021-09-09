@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/card_page.dart';
 import 'package:e_commerce/pages/track_order_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/menu_user.dart';
@@ -138,9 +139,21 @@ class ProfilePage extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        MenuUser(
-                          title: 'Cards',
-                          iconTitle: Icons.payment_outlined,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return CardPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: MenuUser(
+                            title: 'Cards',
+                            iconTitle: Icons.payment_outlined,
+                          ),
                         ),
                         SizedBox(
                           height: 30,
