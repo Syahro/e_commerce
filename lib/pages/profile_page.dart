@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/account_shipping_page.dart';
 import 'package:e_commerce/pages/card_page.dart';
 import 'package:e_commerce/pages/track_order_page.dart';
 import 'package:e_commerce/theme.dart';
@@ -99,9 +100,21 @@ class ProfilePage extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        MenuUser(
-                          title: 'Shipping Address',
-                          iconTitle: Icons.local_shipping_outlined,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return AccountShippingPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: MenuUser(
+                            title: 'Shipping Address',
+                            iconTitle: Icons.local_shipping_outlined,
+                          ),
                         ),
                         SizedBox(
                           height: 30,
