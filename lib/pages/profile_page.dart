@@ -1,6 +1,7 @@
 import 'package:e_commerce/pages/account_shipping_page.dart';
 import 'package:e_commerce/pages/card_page.dart';
 import 'package:e_commerce/pages/track_order_page.dart';
+import 'package:e_commerce/pages/whishlist_empty_page.dart';
 import 'package:e_commerce/pages/whislist_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/menu_user.dart';
@@ -121,6 +122,16 @@ class ProfilePage extends StatelessWidget {
                           height: 30,
                         ),
                         InkWell(
+                          onDoubleTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return WhishlistEmptyPage();
+                                },
+                              ),
+                            );
+                          },
                           onTap: () {
                             Navigator.push(
                               context,
