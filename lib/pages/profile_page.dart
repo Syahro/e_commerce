@@ -1,6 +1,7 @@
 import 'package:e_commerce/pages/account_shipping_page.dart';
 import 'package:e_commerce/pages/card_page.dart';
 import 'package:e_commerce/pages/track_order_page.dart';
+import 'package:e_commerce/pages/whislist_page.dart';
 import 'package:e_commerce/theme.dart';
 import 'package:e_commerce/widget/menu_user.dart';
 import 'package:flutter/material.dart';
@@ -119,9 +120,21 @@ class ProfilePage extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        MenuUser(
-                          title: 'Whishlist',
-                          iconTitle: Icons.favorite_border,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return WhislistPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: MenuUser(
+                            title: 'Whishlist',
+                            iconTitle: Icons.favorite_border,
+                          ),
                         ),
                         SizedBox(
                           height: 30,

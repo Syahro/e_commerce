@@ -203,8 +203,14 @@ class KatalogPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          KatalogCard('new1.png'),
-                          KatalogCard('new2.png'),
+                          KatalogCard(
+                            'new1.png',
+                            false,
+                          ),
+                          KatalogCard(
+                            'new2.png',
+                            false,
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -213,8 +219,14 @@ class KatalogPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          KatalogCard('new3.png'),
-                          KatalogCard('new4.png'),
+                          KatalogCard(
+                            'new3.png',
+                            false,
+                          ),
+                          KatalogCard(
+                            'new4.png',
+                            false,
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -223,8 +235,14 @@ class KatalogPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          KatalogCard('new1.png'),
-                          KatalogCard('new5.png'),
+                          KatalogCard(
+                            'new1.png',
+                            false,
+                          ),
+                          KatalogCard(
+                            'new5.png',
+                            false,
+                          ),
                         ],
                       ),
                     ],

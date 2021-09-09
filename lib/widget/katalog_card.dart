@@ -5,8 +5,12 @@ import '../theme.dart';
 
 class KatalogCard extends StatelessWidget {
   final String imageUrl;
+  final bool isWhish;
 
-  KatalogCard(this.imageUrl);
+  KatalogCard(
+    this.imageUrl,
+    this.isWhish,
+  );
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -32,16 +36,37 @@ class KatalogCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(10),
-              ),
-              child: Image.asset(
-                'assets/images/$imageUrl',
-                width: double.infinity,
-                height: 107,
-                fit: BoxFit.cover,
-              ),
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(10),
+                  ),
+                  child: Image.asset(
+                    'assets/images/$imageUrl',
+                    width: double.infinity,
+                    height: 107,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 10,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      isWhish
+                          ? Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                            )
+                          : Container(),
+                    ],
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 11,
